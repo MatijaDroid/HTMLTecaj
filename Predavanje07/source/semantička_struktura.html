@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Semantička strukutra</title>
+</head>
+<body>
+    <div id="Container">
+        <header>
+            <nav>Glavna navigacija</nav> <!--nav tak koristiti samo jedno!! uvijek za glavnu navigaciju-->
+        </header>
+        <main>
+            <article>
+                <header>
+                    <h1>Naslov članka</h1> <!-- maksimalni broj h1 je 5,max broj h2 je 10 -->
+                </header>
+                <footer></footer>
+                <div id="content"></div>
+                <section>
+                    <h1>Naslov sekcije</h1> <!-- Section h1 unutar article se smanji sa h1 na h2 automatski, isto bi bilo ako bi bio article u sectionu-->
+                </section>
+            </article>
+            <aside>Desna bočna traka</aside>
+        </main>
+        <footer>
+            Podnožje dokumenta
+        </footer>
+    </div>
+</body>
+</html>

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Obrasci</title>
+</head>
+<body>
+    <form action="" name="registrationForm" method="POST" autocomplete="off" enctype="multipart/form-data"><!--autocomplete je po defaultu upaljen, potrebno dodati autocomplete off da se polje ne popunjava  - enctype služi za prijenos datoteka multipart/form-data je za prijenos slika-->
+        <p>
+            <label for="fullName">Ime i prezime*</label><br>
+            <input type="text" name="fullName" id="fullName" placeholder="Upisite ime i prezime" value="" maxlength="20" autofocus required> <!--atribut placeholder stavlja text u area- autofocus property fokusira na polje -value automatski popunjava polje - maxlength - broj maksimalnih unosa znakova-->
+        <p>
+            <label for="email">E-mail adresa (opcionalno)</label><br>
+            <input type="email" name="email" id="email" placeholder="netko@nesto.com" ><!--mora ići sa required ako želimo da se obavezno upiše-->
+        </p>
+        
+        <p>
+            <label for="password">Zaporka*</label><br>
+            <input type="password" name="password" id="password" minlength="8" required> <!--ne ograničavat max broj-->
+        </p>
+
+        <p>
+            <label for="phone">Telefon</label><br>
+            <input type="tel" name="phone" id="phone">
+        </p>
+
+        <p>  
+            <label for="color">Boja</label><br>
+            <input type="color" name="color" id="color">
+        </p>
+
+        <p>
+            <label for="age">Godine</label><br>
+            <input type="number" name="age" id="age" max="200" min="0" step="5"> <!--min i max definira value range koji se može upisati-->
+        </p>
+
+        <p>
+            <input type="checkbox" name="terms" id="terms" value="true" checked><!--checked property nikako ne staviti na uvjete korištenja-->
+            <label for="terms">Uvjeti korištenja</label>
+        </p>
+
+        <p>
+            Ocijenite uslugu <br>
+            <label for="o1">1</label> <!--name mora biti isti da bi ih grupirali!-->
+            <input type="radio" name="grade" id="o1" value="1" checked>
+            <label for="o2">2</label>
+            <input type="radio" name="grade" id="o2" value="2">
+        </p>
+
+        <p>
+            <label for="date">Odaberite datum</label><br>
+            <input type="date" name="date" id="date" min="1980-01-01"><!--zapis datuma premo ISO8601 standardu, skoro nikad u upotrebi zato što su date pickeri bolji-->
+        </p>
+
+            <label for="comment">Komentar</label><br>
+            <textarea name="comment" id="comment" cols="30" rows="10"></textarea>
+
+        <p>
+            <label for="avatar">Slika</label><br>
+            <input type="file" name="avatar" id="avatar"><!--pozornost obratiti na tip datoteke(kasnije) koji se smije uploadati-->
+        </p>
+
+        <p>
+            <button type="submit" >Send</button>
+        </p>
+
+        </p>
+    </form>
+</body>
+</html>
